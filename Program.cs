@@ -7,6 +7,7 @@ class guessinggame
     {
         int playerGuess = 0;
         int computerNum = 0;
+        int numOfGuesses = 0;
 
         Random rnd = new Random();
 
@@ -22,6 +23,7 @@ class guessinggame
             Console.WriteLine("What is your guess?");
             playerGuess = int.Parse(Console.ReadLine());
             
+            numOfGuesses++;
 
             if (playerGuess > computerNum)
             {
@@ -44,8 +46,10 @@ class guessinggame
             {
                 Console.WriteLine("That is an incorrect value!");
             }
-            
+
+        
         }
+        Console.WriteLine($"You got it in {numOfGuesses} guesses.");
     }
 }
 
